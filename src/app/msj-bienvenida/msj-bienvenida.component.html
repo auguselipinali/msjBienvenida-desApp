@@ -1,15 +1,15 @@
 <h2>Mensaje de Bienvenida</h2>
-<div *ngIf="!showForm">
+<div *ngIf="!mostrarForm">
   <p>{{ mensaje }}</p>
-  <button (click)="showForm = true">Editar nombre</button>
+  <button (click)="mostrarForm = true">Editar nombre</button>
   <button (click)="toggleLista()">Mostrar/Ocultar lista</button>
 </div>
-<div *ngIf="showForm">
+<div *ngIf="mostrarForm">
   <label for="nombreInput">Nombre:</label>
   <input type="text" id="nombreInput" [(ngModel)]="nombre">
-  <button (click)="actualizarMensaje()">Actualizar mensaje</button>
+  <button (click)="actualizarMensaje()">Ingresar</button>
 </div>
-<div *ngIf="showLista">
+<div *ngIf="mostrarLista">
   <h3>Últimos 10 nombres ingresados:</h3>
   <ul>
     <li *ngFor="let n of nombres">{{ n }}</li>

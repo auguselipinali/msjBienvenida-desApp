@@ -6,13 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./msj-bienvenida.component.css']
 })
 export class MsjBienvenidaComponent {
-  mensaje: string;
+  mensaje: string = "";
   nombre: string = "";
   nombres: string[] = [];
-  showForm = false;
-  showLista = false;
+  mostrarForm = false;
+  mostrarLista = false;
 
-  constructor() {
+  inicio() {
     this.mensaje = 'Bienvenido';
   }
 
@@ -23,10 +23,10 @@ export class MsjBienvenidaComponent {
       this.nombres.shift();
     }
     this.nombre = '';
-    this.showForm = false;
+    this.mostrarForm = false;
   }
 
   toggleLista() {
-    this.showLista = !this.showLista;
+    this.mostrarLista = !this.mostrarLista;
   }
 }
